@@ -1,0 +1,57 @@
+.BoardsBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fontTaskTitle {
+  color: var(--blue);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-right: 0.3rem;
+}
+
+.fontTaskCompleted {
+  color: var(--purple);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.content {
+  border-radius: 0.5rem;
+  border-top: 1px solid var(--gray-400);
+  display: flex;
+  padding: 4rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+  width: 90%;
+  margin-left: 3rem;
+}
+
+.fontTextContent400 {
+  font-weight: 400;
+  color: var(--gray-300);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 140%; /* 1.4rem */
+}
+
+.fontTextContent700 {
+  color: var(--gray-300);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 1.4rem */
+}

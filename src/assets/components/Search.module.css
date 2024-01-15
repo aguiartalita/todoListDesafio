@@ -1,0 +1,17 @@
+.searchBox {
+  padding-left: 25%;
+}
+
+.searchInput {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 0 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+  width: 39.875rem;
+  position: relative;
+  top: -30px;
+}
