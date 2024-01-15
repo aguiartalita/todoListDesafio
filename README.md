@@ -19,6 +19,8 @@ O projeto passara pelo processo de desenvolvimento de uma lista de afazares inte
 #### Parte 1: desenvolvida
 
 *Proposto no design figma pela rockeatSeat
-![Proposto no design figma pela rockeatSeat](image.png)
+![Proposto no design figma pela rockeatSeat](https://github.com/aguiartalita/todoListDesafio/assets/87323173/c2923265-269a-4b1c-a7b5-ef50c0c490b0)
+
+
 *Desenvolvido até o momento
 ![Desenvolvido até o momento](image-1.png)
