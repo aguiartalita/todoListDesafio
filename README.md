@@ -11,7 +11,7 @@ Atualmente, dois plugins oficiais estão disponíveis:
 
 ## 📌 Desenvolvimento do Desafio – Prática de Conhecimento
 
-Este projeto faz parte de um **desafio prático de desenvolvimento Front-End**, com o objetivo de consolidar conhecimentos em **React, TypeScript, componentização e gerenciamento de estado**.
+Este projeto faz parte de um **desafio prático de desenvolvimento Front-End**, com o objetivo de consolidar conhecimentos em **React, TypeScript, componentização, gerenciamento de estado e UX**.
 
 A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usuário:
 
@@ -19,7 +19,8 @@ A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usu
 - Visualizar tarefas cadastradas
 - Marcar e desmarcar tarefas como concluídas
 - Excluir tarefas individualmente
-- Visualizar a data e hora de conclusão das tarefas
+- Visualizar data e hora de conclusão das tarefas
+- Filtrar tarefas por status (todas, pendentes e concluídas)
 - Acompanhar contadores de tarefas criadas e concluídas
 - Manter as tarefas persistidas mesmo após recarregar a página
 
@@ -46,14 +47,24 @@ A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usu
 - Contadores reativos (criadas e concluídas)
 - Persistência de dados via `localStorage`
 - Exibição da data e hora de conclusão
+- Filtro de tarefas por status:
+  - Todas
+  - Pendentes
+  - Concluídas
+- Filtros com UX aprimorada:
+  - Ícones visuais
+  - Seleção por radio buttons
+  - Posicionados acima da listagem, centralizados
 - Feedback visual de estados
 - Tratamento de estado vazio
 - Melhorias de acessibilidade (teclado e ARIA)
 - Correção de contraste no input
 
-### 🔜 Próximos passos 
-- Ordenação de tarefas (pendentes / concluídas)
-- Filtros por status
+### 🔜 Próximos passos (opcional)
+- Versão Mobile
+- Persistir filtro selecionado no `localStorage`
+- Ordenação customizada por prioridade
+- Botão para limpar tarefas concluídas
 - Testes automatizados
 - Deploy da aplicação
 
@@ -65,4 +76,5 @@ A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usu
 ![Design proposto](https://github.com/aguiartalita/todoListDesafio/assets/87323173/c2923265-269a-4b1c-a7b5-ef50c0c490b0)
 
 ### Implementação atual
-<img width="1493" height="843" alt="image" src="https://github.com/user-attachments/assets/e61c5023-aa4b-419d-b2cb-b726ec13eeff" />
+<img width="1253" height="815" alt="image" src="https://github.com/user-attachments/assets/cb25782c-efc0-4eae-b469-ba2cdea88aa8" />
+
