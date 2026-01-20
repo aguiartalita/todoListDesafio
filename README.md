@@ -1,26 +1,59 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto utiliza React com TypeScript e Vite, oferecendo uma configuração mínima com Hot Module Replacement (HMR) e regras básicas de ESLint.
 
-Currently, two official plugins are available:
+Atualmente, dois plugins oficiais estão disponíveis:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) — utiliza Babel para Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) — utiliza SWC para Fast Refresh
 
-## Desenvolvimento Desafio - Pratica Conhecimento
+---
 
-O projeto passara pelo processo de desenvolvimento de uma lista de afazares interativa. Com opção de adicionar e excluir tarefas, e contador de tarefas concluídas.
+## 📌 Desenvolvimento do Desafio – Prática de Conhecimento
 
-### Desenvolvimento aplicação
+Este projeto faz parte de um **desafio prático de desenvolvimento Front-End**, com o objetivo de consolidar conhecimentos em **React, TypeScript e componentização**.
 
-*React/Typescritp
-*phospor icon
+A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usuário:
 
-#### Parte 1: desenvolvida
+- Adicionar novas tarefas
+- Visualizar tarefas cadastradas
+- Marcar tarefas como concluídas
+- Acompanhar contadores de tarefas criadas e concluídas
 
-*Proposto no design figma pela rockeatSeat
-![Proposto no design figma pela rockeatSeat](https://github.com/aguiartalita/todoListDesafio/assets/87323173/c2923265-269a-4b1c-a7b5-ef50c0c490b0)
+---
 
+## 🛠️ Tecnologias utilizadas
 
-*Desenvolvido até o momento
-![Desenvolvido até o momento](image-1.png)
+- React
+- TypeScript
+- Vite
+- CSS Modules
+- Phosphor Icons
+
+---
+
+## 🚧 Status do desenvolvimento
+
+### ✔️ Funcionalidades implementadas
+- Criação de tarefas
+- Listagem dinâmica de tarefas
+- Marcação de tarefa como concluída
+- Contadores reativos
+- Feedback visual para tarefas concluídas
+- Tratamento de estado vazio
+
+### 🔜 Próximos passos (opcional)
+- Remoção de tarefas
+- Persistência com `localStorage`
+- Melhorias de acessibilidade
+- Testes automatizados
+
+---
+
+## 🎨 Referência visual
+
+### Design proposto (Figma – Rocketseat)
+![Design proposto](https://github.com/aguiartalita/todoListDesafio/assets/87323173/c2923265-269a-4b1c-a7b5-ef50c0c490b0)
+
+### Implementação atual
+> <img width="1493" height="870" alt="image" src="https://github.com/user-attachments/assets/0f4886e0-0817-4ad6-8a2e-afe56b9b805a" />
