@@ -97,9 +97,20 @@
 
 .taskTitle {
   flex: 1;
+    color: var(--gray-100);
 }
 
 .completed .taskTitle {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.checkbox:focus-visible {
+  outline: 2px solid var(--purple);
+}
+

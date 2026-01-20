@@ -14,4 +14,14 @@
   width: 39.875rem;
   position: relative;
   top: -30px;
+color: var(--gray-100);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.checkbox:focus-visible {
+  outline: 2px solid var(--purple);
 }

@@ -5,15 +5,9 @@ import styles from './App.module.css'
 import { Header } from './assets/components/Header'
 import { Search } from './assets/components/Search'
 import { BoardTasks } from './assets/components/BoardTasks'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Task } from './types/Task'
 
-
-
-interface Task {
-  id: string
-  title: string
-  completed: boolean
-}
 
 
 export function App() {
@@ -36,13 +30,36 @@ function handleToggleTask(id: string) {
   setTasks(prev =>
     prev.map(task =>
       task.id === id
-        ? { ...task, completed: !task.completed }
+        ? {
+            ...task,
+            completed: !task.completed,
+            completedAt: !task.completed
+              ? new Date().toISOString()
+              : undefined,
+          }
         : task
     )
   )
 }
 
-  
+
+function handleDeleteTask(id: string) {
+  setTasks(prev => prev.filter(task => task.id !== id))
+}
+
+  useEffect(() => {
+  const storedTasks = localStorage.getItem('tasks')
+
+  if (storedTasks) {
+    setTasks(JSON.parse(storedTasks))
+  }
+}, [])
+
+useEffect(() => {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+}, [tasks])
+
+
   return (
       <div>
         <Header />
@@ -50,7 +67,12 @@ function handleToggleTask(id: string) {
         <Search onCreateTask={handleCreateTask} />
       
       </div>
-        <BoardTasks tasks={tasks} onToggleTask={handleToggleTask} />
+       <BoardTasks
+  tasks={tasks}
+  onToggleTask={handleToggleTask}
+  onDeleteTask={handleDeleteTask}
+/>
+
       </div>
      
    
