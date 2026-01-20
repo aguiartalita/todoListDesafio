@@ -19,12 +19,14 @@ export function Search({ onCreateTask }: SearchProps) {
   return (
      <form className={styles.searchBox} onSubmit={handleSubmit}>
       <input
-        type="text"
-        className={styles.searchInput}
-        value={value}
-        onChange={e => setValue(e.target.value)}
-        placeholder="Adicione uma nova tarefa"
-      />
+  type="text"
+  className={styles.searchInput}
+  value={value}
+  onChange={e => setValue(e.target.value)}
+  placeholder="Adicione uma nova tarefa"
+  aria-label="Adicionar nova tarefa"
+/>
+
     </form>
   )
 }
