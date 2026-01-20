@@ -1,9 +1,30 @@
 import styles from './Search.module.css'
+import { useState } from 'react'
 
-export function Search() {
+interface SearchProps{
+ onCreateTask: (title: string) => void
+}
+
+export function Search({ onCreateTask }: SearchProps) {
+   const [value, setValue] = useState('')
+
+   function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!value.trim()) return
+
+    onCreateTask(value)
+    setValue('')
+  }
+
   return (
-    <div className={styles.searchBox}>
-      <input type="Text" className={styles.searchInput} />
-    </div>
+     <form className={styles.searchBox} onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className={styles.searchInput}
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        placeholder="Adicione uma nova tarefa"
+      />
+    </form>
   )
 }
