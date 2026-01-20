@@ -1,0 +1,16 @@
+.counter {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 62.4375rem;
+  background: var(--Gray-400, #333);
+  width: 1.563rem;
+}
+
+.fontCounter {
+  color: var(--Gray-200, #d9d9d9);
+}
+
