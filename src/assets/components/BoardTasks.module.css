@@ -114,3 +114,35 @@
   outline: 2px solid var(--purple);
 }
 
+.filtersWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1.5rem;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gray-500);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--gray-100);
+  font-size: 0.875rem;
+}
+
+.filterItem input {
+  display: none;
+}
+
+.filterItem:hover {
+  background: var(--gray-400);
+}
+
+.activeFilter {
+  background: var(--blue);
+  color: #fff;
+}
+

@@ -12,70 +12,76 @@ import { Task } from './types/Task'
 
 export function App() {
 
-const [tasks, setTasks] = useState<Task[]>([])
+  const [tasks, setTasks] = useState<Task[]>([])
 
-function handleCreateTask(title: string) {
-  if (!title.trim()) return
+  function handleCreateTask(title: string) {
+    if (!title.trim()) return
 
-  const newTask: Task = {
-    id: crypto.randomUUID(),
-    title,
-    completed: false,
+    const newTask: Task = {
+      id: crypto.randomUUID(),
+      title,
+      completed: false,
+    }
+
+    setTasks(prev => [...prev, newTask])
   }
 
-  setTasks(prev => [...prev, newTask])
-}
-
-function handleToggleTask(id: string) {
-  setTasks(prev =>
-    prev.map(task =>
-      task.id === id
-        ? {
+  function handleToggleTask(id: string) {
+    setTasks(prev =>
+      prev.map(task =>
+        task.id === id
+          ? {
             ...task,
             completed: !task.completed,
             completedAt: !task.completed
               ? new Date().toISOString()
               : undefined,
           }
-        : task
+          : task
+      )
     )
-  )
-}
+  }
 
 
-function handleDeleteTask(id: string) {
-  setTasks(prev => prev.filter(task => task.id !== id))
-}
+  function handleDeleteTask(id: string) {
+    setTasks(prev => prev.filter(task => task.id !== id))
+  }
 
   useEffect(() => {
-  const storedTasks = localStorage.getItem('tasks')
+    const storedTasks = localStorage.getItem('tasks')
 
-  if (storedTasks) {
-    setTasks(JSON.parse(storedTasks))
-  }
-}, [])
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks))
+    }
+  }, [])
 
-useEffect(() => {
-  localStorage.setItem('tasks', JSON.stringify(tasks))
-}, [tasks])
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
+
+  type TaskFilter = 'all' | 'pending' | 'completed'
+
+  const [filter, setFilter] = useState<TaskFilter>('all')
 
   return (
-      <div>
-        <Header />
+    <div>
+      <Header />
       <div>
         <Search onCreateTask={handleCreateTask} />
-      
+
       </div>
-       <BoardTasks
+      <BoardTasks
   tasks={tasks}
+  filter={filter}
+  onChangeFilter={setFilter}
   onToggleTask={handleToggleTask}
   onDeleteTask={handleDeleteTask}
 />
 
-      </div>
-     
-   
+    </div>
+
+
   )
 }
 
