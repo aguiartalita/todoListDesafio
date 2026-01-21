@@ -7,6 +7,7 @@ import { Search } from './assets/components/Search'
 import { BoardTasks } from './assets/components/BoardTasks'
 import { useState, useEffect } from 'react'
 import { Task } from './types/Task'
+import { fetchInitialTasks } from './services/todoApi'
 
 
 
@@ -47,13 +48,24 @@ export function App() {
     setTasks(prev => prev.filter(task => task.id !== id))
   }
 
-  useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks')
+useEffect(() => {
+  const storedTasks = localStorage.getItem('tasks')
 
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks))
-    }
-  }, [])
+  if (storedTasks) {
+    setTasks(JSON.parse(storedTasks))
+    return
+  }
+
+  fetchInitialTasks()
+    .then(tasksFromApi => {
+      setTasks(tasksFromApi)
+      localStorage.setItem('tasks', JSON.stringify(tasksFromApi))
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}, [])
+
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
