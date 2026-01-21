@@ -59,9 +59,22 @@ A aplicação consiste em uma **lista de tarefas interativa**, permitindo ao usu
 - Tratamento de estado vazio
 - Melhorias de acessibilidade (teclado e ARIA)
 - Correção de contraste no input
+- Versão Mobile
+
+#### 🔌 Integração com API (Fake API)
+- A aplicação realiza uma carga inicial de tarefas a partir de uma API pública, utilizada apenas como seed de dados:
+- API utilizada: JSONPlaceholder (/todos)
+- A API é consumida somente no primeiro acesso
+- Caso existam tarefas salvas no localStorage, a API não é chamada
+- Após a carga inicial, todo o gerenciamento (criação, edição, exclusão e filtros) ocorre exclusivamente no Front-End
+** Essa abordagem garante:
+- Simulação de consumo de API real
+- Performance no carregamento
+- Independência entre estado da UI e backend
+- Facilidade de evolução futura para uma API própria
+
 
 ### 🔜 Próximos passos (opcional)
-- Versão Mobile
 - Persistir filtro selecionado no `localStorage`
 - Ordenação customizada por prioridade
 - Botão para limpar tarefas concluídas
